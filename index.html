@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <input type="text" id="demo">
+    <input type="text" id="id">
+    <button onclick="myfunction()">aynı kelimeyi görmek için tıklayın</button>
+    <h1 id="id2"></h1>
+    
+<script>
+        function myfunction(){
+        var x=document.getElementById("demo").value;
+        var y=document.getElementById("id").value;
+        var array_1=x.split(",");
+        var array_2=y.split(",");
+        var i=0,j=0;
+        var match=new Array();
+           for(i=0;i<array_1.length;++i){
+               for(j=0;j<array_2.length;++j){
+                   if(array_1[i]==array_2[j])
+                   match[i]=array_1[i];
+                
+               }
+           }         
+        
+        
+        match.sort();
+        document.getElementById("id2").innerHTML=match;
+                
+        
+
+        }
+    </script>
+    
+</body>
+
+</html>
